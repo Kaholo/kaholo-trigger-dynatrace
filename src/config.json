@@ -1,0 +1,34 @@
+{
+  "name": "dynatrace-trigger",
+  "type": "trigger",
+  "execProgram": "node",
+  "main": "app.js",
+  "exposeRoute": true,
+  "imgUrl": "dynatrace.png",
+  "version": "1.0.0",
+  "description": "Handle dynatrace alert webhook",
+  "methods": [
+    {
+      "name": "ALERT_WEBHOOK",
+      "route": "post /webhook/dynatrace/alert",
+      "viewName": "Dynatrace alert webhook",
+      "params": [
+        {
+          "name": "STATE",
+          "viewName": "Problem State",
+          "type": "options",
+          "options" : [
+            {
+              "id":"OPEN",
+              "name":"OPEN"
+            },
+            {
+              "id":"RESOLVED",
+              "name":"RESOLVED"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
