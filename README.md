@@ -1,7 +1,7 @@
 # kaholo-trigger-dynatrace
 Kaholo Trigger for Dynatrace
 
-Route: /webhook/dynatrace/alert
+**Route: /webhook/dynatrace/alert**
 
 ## Method: Dynatrace alert webhook
 
